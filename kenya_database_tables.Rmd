@@ -20,7 +20,8 @@ library(stringr)
 library(taxize)
 ```
 
-
+ test git bash
+ 
 ```{r}
 
 all<-read.csv("all_data_exif_out.csv")
