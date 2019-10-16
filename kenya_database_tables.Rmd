@@ -18,12 +18,15 @@ library(lubridate)
 library(knitr)
 library(stringr)
 library(taxize)
+library(profvis)
+
 ```
 
 
 ```{r}
 
-all<-read.csv("all_data_exif_out.csv")
+all<-read.csv(here::here("all_data_exif_out.csv"))
+
 ```
 
 
@@ -216,6 +219,8 @@ colnames(sel_exif)<-c("SiteID", "Site", "LocationID", "CameraID", "Season", "Dat
 
 ##Species Table
 
+Using taxize to get taxonmic structure of each of the species found in kenya
+
 ```{r, eval=FALSE}
 sp<-read.csv("species_codes.csv", stringsAsFactors = FALSE, header = FALSE, na.strings = FALSE)
 
@@ -228,13 +233,25 @@ tax_out<-function(id){
   out<-classification(id,db = "ncbi")
   pause(3)
   sp_out<-out[[1]][out[[1]]$rank %in% c("kingdom", "phylum","class", "order", "family", "genus", "species"),]
+  
+  sp_out$kingdom<-sp_out$name[sp_out$rank == "kingdom"]
+  sp_out$phylum<-sp_out$name[sp_out$rank == "phylum"]
+  sp_out$class<-sp_out$name[sp_out$rank == "class"]
+  sp_out$order<-sp_out$name[sp_out$rank == "order"]
+  sp_out$family<-sp_out$name[sp_out$rank == "family"]
+  sp_out$genus<-sp_out$name[sp_out$rank == "genus"]
+  sp_out$species<-sp_out$name[sp_out$rank == "species"]
+  
+  sp_out<-sp_out %>% dplyr::select(kingdom, phylum, class, order, family, genus, species) %>% distinct()
   return(sp_out)
 
   }
 
 taxon_out<-lapply(uids[1:44], tax_out)
 
+taxon_df<-do.call(rbind,taxon_out)
 
+write.csv(taxon_df, "speciesTbl.csv", row.names = FALSE)
 
 ```
 
