@@ -25,7 +25,7 @@ library(profvis)
 
 ```{r}
 
-all<-read.csv(here::here("all_data_exif_out.csv"))
+all<-vroom::vroom(here::here("all_data_exif_out.csv"))
 
 ```
 
@@ -155,33 +155,6 @@ kable(head(dep))
 
 ```
 
-## Image Table
-
-```{r}
-
-
-
-```
-##Prediction Table
-
-```{r}
-
-allimg<-read.csv("kenya_ml_species_output_split_image.csv", stringsAsFactors = FALSE)
-allimg$CamUniqueAB<-basename(dirname(allimg$IMG_ID))
-allimg$IMG_NO<-basename(allimg$IMG_ID)
-
-allimg$IMG_NO<-allimg$IMG_NO%>%
-                    gsub("_0.JPG", "", .)%>%
-                    gsub("_1.JPG", "", .)%>%
-                  
-    gsub("IMG", "", .)
-
-allimg$CAM_IMG<-gsub("_CT.*","",allimg$CamUniqueAB)
-allimg$CAM_IMG<-paste0(allimg$CAM_IMG, allimg$IMG_NO)
-
-
-allimg$ID_uniqueAB<-paste0(allimg$Site,"/",allimg$Season,"/", allimg$CamUniqueAB, "/", allimg$CAM_IMG)
-```
 
 ```{r}
 #all<-read.csv("all_data_exif_out.csv", stringsAsFactors = FALSE)
@@ -229,10 +202,32 @@ sel_exif<-all_exif_fp%>%
 colnames(sel_exif)<-c("SiteID", "Site", "LocationID", "CameraID", "Season", "Date", "DateTime","ImageNo",  "FileLocation")
 
 
-write.csv(sel_exif, here::here("kenya_data/ImageTbl.csv"), row.names = FALSE)
+write.csv(sel_exif, here::here("ImageTbl.csv"), row.names = FALSE)
 
 
 ```
+
+##Prediction Table
+
+```{r}
+
+allimg<-read.csv("kenya_ml_species_output_split_image.csv", stringsAsFactors = FALSE)
+allimg$CamUniqueAB<-basename(dirname(allimg$IMG_ID))
+allimg$IMG_NO<-basename(allimg$IMG_ID)
+
+allimg$IMG_NO<-allimg$IMG_NO%>%
+                    gsub("_0.JPG", "", .)%>%
+                    gsub("_1.JPG", "", .)%>%
+                  
+    gsub("IMG", "", .)
+
+allimg$CAM_IMG<-gsub("_CT.*","",allimg$CamUniqueAB)
+allimg$CAM_IMG<-paste0(allimg$CAM_IMG, allimg$IMG_NO)
+
+
+allimg$ID_uniqueAB<-paste0(allimg$Site,"/",allimg$Season,"/", allimg$CamUniqueAB, "/", allimg$CAM_IMG)
+```
+
 
 ##Species Table
 
