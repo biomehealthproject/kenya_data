@@ -69,11 +69,11 @@ locs$area[grepl("MT",locs$Location.ID)]<- "MT"
 locs$area[grepl("NB",locs$Location.ID)]<- "NB"
 locs$area[grepl("OMC",locs$Location.ID)]<- "OMC"
 
-colnames(locs)<-c("Location", "Latitude", "Longitude","CorrdSystem","Area" )
+colnames(locs)<-c("Location", "Latitude", "Longitude","CoordSystem","Area" )
 
 kable(summary(locs))
 
-#write.csv(locs, here::here("database/kenya_data/LocationTbl.csv"), row.names = FALSE)
+#write.csv(locs, "LocationTbl.csv", row.names = FALSE)
 
 
 ```
@@ -113,13 +113,13 @@ names<-c("Location_ID", "Camera_ID", "Start", "End", "No_Days")
 colnames(dep1)<-names
 colnames(dep2)<-names
 
-dep1$Deployment<-"Kenya_1.1" #1 for season .1 for deployment
-dep2$Deployment<-"Kenya_1.2"
+dep1$Deployment<-1 #1 for season .1 for deployment
+dep2$Deployment<-2
 
 dep<-rbind(dep1,dep2)
 
 dep$Country<-"Kenya"
-dep$Season<-"Kenya_1"
+dep$Season<-1
 
 dep<-dep[!is.na(dep$Start) & !is.na(dep$End),]
 
@@ -129,7 +129,7 @@ dep_out<-dep %>%
 
 kable(dep_out)
 
-#write.csv(dep_out, here::here("database/kenya_data/DeploymentTbl.csv"), row.names = FALSE)
+write.csv(dep_out, "DeploymentTbl.csv", row.names = FALSE)
 
 
 ```
@@ -202,7 +202,7 @@ sel_exif<-all_exif_fp%>%
 colnames(sel_exif)<-c("SiteID", "Site", "LocationID", "CameraID", "Season", "Date", "DateTime","ImageNo",  "FileLocation")
 
 
-write.csv(sel_exif, here::here("ImageTbl.csv"), row.names = FALSE)
+write.csv(sel_exif, "ImageTbl.csv", row.names = FALSE)
 
 
 ```
@@ -262,6 +262,8 @@ tax_out<-function(id){
 taxon_out<-lapply(uids[1:44], tax_out)
 
 taxon_df<-do.call(rbind,taxon_out)
+
+colnames(taxon_df)<-c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
 
 write.csv(taxon_df, "speciesTbl.csv", row.names = FALSE)
 
