@@ -159,6 +159,13 @@ kable(head(dep))
 
 ```{r}
 
+
+
+```
+##Prediction Table
+
+```{r}
+
 allimg<-read.csv("kenya_ml_species_output_split_image.csv", stringsAsFactors = FALSE)
 allimg$CamUniqueAB<-basename(dirname(allimg$IMG_ID))
 allimg$IMG_NO<-basename(allimg$IMG_ID)
@@ -177,7 +184,12 @@ allimg$ID_uniqueAB<-paste0(allimg$Site,"/",allimg$Season,"/", allimg$CamUniqueAB
 ```
 
 ```{r}
-all<-read.csv("all_data_exif_out.csv", stringsAsFactors = FALSE)
+#all<-read.csv("all_data_exif_out.csv", stringsAsFactors = FALSE)
+
+all<-vroom::vroom("all_data_exif_out.csv")
+
+# all_ch<-all %>% 
+#   filter(date > as.Date("2018-10-04") & date < as.Date("2018-11-20"))
 
 all$Season<-NULL
 all$Season<-ifelse(grepl("november",all$filepath ), "november", "october")
@@ -194,26 +206,31 @@ all$IMG_Loc<-paste0(all$Location.ID, all$IMG_Loc)
 all$ID_uniqueAB<-paste0(all$Site, "/", all$Season, "/", all$site_cam, "/", all$IMG_Loc)
 all$ID_uniqueAB<-gsub(".JPG","",all$ID_uniqueAB)
  
-all_exif<-merge(allimg, all, by = "ID_uniqueAB")   #some images missing - about 16000 - needs cleaning up after lunch
 
-all_exif$filepath<-gsub("\\\\","/",all_exif$filepath)
+#not going to include the predictions based on snapshot serengeti so no need to merge in here
+#all_exif<-merge(allimg, all, by = "ID_uniqueAB")   #some images missing - about 16000 - needs cleaning up after lunch
+
+all$filepath<-gsub("\\\\","/",all$filepath)
 
 ```
 
 
 ```{r}
-fp<-read.csv("kenya_original_filepaths_working_filepaths.csv", stringsAsFactors = FALSE)
+#fp<-read.csv("kenya_original_filepaths_working_filepaths.csv", stringsAsFactors = FALSE)
+fp<-vroom::vroom("kenya_original_filepaths_working_filepaths.csv", delim = ",")
+
 fp$filepath<-gsub("//","/", fp$filepath)
 
-all_exif_fp<-merge(fp, all_exif, by = "filepath")
+all_exif_fp<-merge(fp, all, by = c("filepath","image_no"))
 
 sel_exif<-all_exif_fp%>%
-  select(Site.ID,Site.x, Location.ID,Camera.ID,Season.x ,date,datetime,image_no.x,ab,CommonName,Confidence, new_file_structure)
+  select(Site.ID,Site, Location.ID,Camera.ID,Season ,date,datetime,image_no, new_file_structure)
 
-colnames(sel_exif)<-c("SiteID", "Site", "LocationID", "CameraID", "Season", "Date", "DateTime","ImageNo","AB",  "CommonName","Confidence", "FileLocation")
+colnames(sel_exif)<-c("SiteID", "Site", "LocationID", "CameraID", "Season", "Date", "DateTime","ImageNo",  "FileLocation")
 
 
-#write.csv(sel_exif, here::here("database/kenya_data/ImageTbl.csv"), row.names = FALSE)
+write.csv(sel_exif, here::here("kenya_data/ImageTbl.csv"), row.names = FALSE)
+
 
 ```
 
