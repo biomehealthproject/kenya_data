@@ -1,0 +1,241 @@
+---
+title: "Database Tables Kenya"
+author: "Fiona Spooner"
+date: "July 30, 2019"
+output: 
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE,warning = FALSE)
+```
+
+```{r}
+library(dplyr)
+library(here)
+library(lubridate)
+library(knitr)
+library(stringr)
+library(taxize)
+```
+
+
+```{r}
+
+all<-read.csv("all_data_exif_out.csv")
+```
+
+
+##Area Table
+
+```{r}
+
+sites<-all %>%
+  select(Site.ID)%>%
+  distinct()
+
+sites$SiteName<-NULL
+sites$SiteName[sites$Site.ID == "MN"]<- "Mara North"
+sites$SiteName[sites$Site.ID == "MT"]<- "Mara Triangle"
+sites$SiteName[sites$Site.ID == "NB"]<- "Naboisho"
+sites$SiteName[sites$Site.ID == "OMC"]<- "Olare Motorogi Consrevancy"
+sites$Country<-"Kenya"
+
+colnames(sites)<-c("Area", "AreaName", "Country")
+
+kable(sites)
+
+#write.csv(sites, here::here("database/kenya_data/AreaTbl.csv"), row.names = FALSE)
+
+```
+
+
+##Location Table
+
+```{r}
+
+locs<-read.csv("CameraLocations.csv")
+
+locs$coordSystem<-NULL
+locs$coordSystem<-"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs "
+
+locs$area<-NULL
+locs$area[grepl("MN",locs$Location.ID)]<- "MN"
+locs$area[grepl("MT",locs$Location.ID)]<- "MT"
+locs$area[grepl("NB",locs$Location.ID)]<- "NB"
+locs$area[grepl("OMC",locs$Location.ID)]<- "OMC"
+
+colnames(locs)<-c("Location", "Latitude", "Longitude","CorrdSystem","Area" )
+
+kable(summary(locs))
+
+#write.csv(locs, here::here("database/kenya_data/LocationTbl.csv"), row.names = FALSE)
+
+
+```
+
+
+##Field Season Table
+
+```{r}
+
+cam<-read.csv("CameraDateData.csv")
+cam$Start_1<-as.Date(cam$Start_1, format = "%d-%m-%y")
+cam$End_1<-as.Date(cam$End_1, format = "%d-%m-%y")
+
+cam$Start_2<-as.Date(cam$Start_2, format = "%d-%m-%y")
+cam$End_2<-as.Date(cam$End_2, format = "%d-%m-%y")
+
+#cam[(cam$End_1 - cam$Start_1) >cam$No_Days_1,]
+
+season<-data.frame("Kenya_1", year(cam$Start_1[1]),min(na.omit(cam$Start_1)),max(na.omit(cam$End_2)), nrow(cam), "Kenya")
+colnames(season)<-c("Season", "Year", "StartDate", "EndDate", "NumCameras", "Country")
+
+kable(season)
+
+#write.csv(season, here::here("database/kenya_data/FieldSeasonTbl.csv"), row.names = FALSE)
+
+```
+
+
+## Deployment Table
+
+```{r}
+
+dep1<-cam[,1:5]
+dep2<-cam[,c(1,6:9)]
+
+names<-c("Location_ID", "Camera_ID", "Start", "End", "No_Days")
+colnames(dep1)<-names
+colnames(dep2)<-names
+
+dep1$Deployment<-"Kenya_1.1" #1 for season .1 for deployment
+dep2$Deployment<-"Kenya_1.2"
+
+dep<-rbind(dep1,dep2)
+
+dep$Country<-"Kenya"
+dep$Season<-"Kenya_1"
+
+dep<-dep[!is.na(dep$Start) & !is.na(dep$End),]
+
+dep_out<-dep %>%
+  group_by(Deployment, Country, Season)%>%
+  summarise(StartDate = min(na.omit(Start)), EndDate = max(na.omit(End)), NumCameras = n())
+
+kable(dep_out)
+
+#write.csv(dep_out, here::here("database/kenya_data/DeploymentTbl.csv"), row.names = FALSE)
+
+
+```
+
+## CT Study Table
+```{r}
+
+dep$Location_ID<-str_trim(as.character(dep$Location_ID))
+
+dep$area<-NULL
+dep$area[grepl("MN",dep$Location_ID)]<- "MN"
+dep$area[grepl("MT",dep$Location_ID)]<- "MT"
+dep$area[grepl("NB",dep$Location_ID)]<- "NB"
+dep$area[grepl("OMC",dep$Location_ID)]<- "OMC"
+
+dep$SensorType<-"CT"
+
+colnames(dep)<-c("Location", "Camera_ID", "DateOn", "DateOff", "DaysDeployed","Deployment", "Country", "Season", "Area", "SensorType")
+
+kable(head(dep))
+
+#write.csv(dep, here::here("database/kenya_data/SensorStudyTbl.csv"), row.names = FALSE)
+
+```
+
+## Image Table
+
+```{r}
+
+allimg<-read.csv("kenya_ml_species_output_split_image.csv", stringsAsFactors = FALSE)
+allimg$CamUniqueAB<-basename(dirname(allimg$IMG_ID))
+allimg$IMG_NO<-basename(allimg$IMG_ID)
+
+allimg$IMG_NO<-allimg$IMG_NO%>%
+                    gsub("_0.JPG", "", .)%>%
+                    gsub("_1.JPG", "", .)%>%
+                  
+    gsub("IMG", "", .)
+
+allimg$CAM_IMG<-gsub("_CT.*","",allimg$CamUniqueAB)
+allimg$CAM_IMG<-paste0(allimg$CAM_IMG, allimg$IMG_NO)
+
+
+allimg$ID_uniqueAB<-paste0(allimg$Site,"/",allimg$Season,"/", allimg$CamUniqueAB, "/", allimg$CAM_IMG)
+```
+
+```{r}
+all<-read.csv("all_data_exif_out.csv", stringsAsFactors = FALSE)
+
+all$Season<-NULL
+all$Season<-ifelse(grepl("november",all$filepath ), "november", "october")
+
+all$Site<-NULL
+all$Site[all$Site.ID == "MN"]<-"mara_north"
+all$Site[all$Site.ID == "MT"]<-"mara_triangle"
+all$Site[all$Site.ID == "NB"]<-"naboisho"
+all$Site[all$Site.ID == "OMC"]<-"omc"
+
+all$IMG_Loc<-gsub("IMG","",all$image_no)
+all$IMG_Loc<-paste0(all$Location.ID, all$IMG_Loc)
+
+all$ID_uniqueAB<-paste0(all$Site, "/", all$Season, "/", all$site_cam, "/", all$IMG_Loc)
+all$ID_uniqueAB<-gsub(".JPG","",all$ID_uniqueAB)
+ 
+all_exif<-merge(allimg, all, by = "ID_uniqueAB")   #some images missing - about 16000 - needs cleaning up after lunch
+
+all_exif$filepath<-gsub("\\\\","/",all_exif$filepath)
+
+```
+
+
+```{r}
+fp<-read.csv("kenya_original_filepaths_working_filepaths.csv", stringsAsFactors = FALSE)
+fp$filepath<-gsub("//","/", fp$filepath)
+
+all_exif_fp<-merge(fp, all_exif, by = "filepath")
+
+sel_exif<-all_exif_fp%>%
+  select(Site.ID,Site.x, Location.ID,Camera.ID,Season.x ,date,datetime,image_no.x,ab,CommonName,Confidence, new_file_structure)
+
+colnames(sel_exif)<-c("SiteID", "Site", "LocationID", "CameraID", "Season", "Date", "DateTime","ImageNo","AB",  "CommonName","Confidence", "FileLocation")
+
+
+#write.csv(sel_exif, here::here("database/kenya_data/ImageTbl.csv"), row.names = FALSE)
+
+```
+
+##Species Table
+
+```{r, eval=FALSE}
+sp<-read.csv("species_codes.csv", stringsAsFactors = FALSE, header = FALSE, na.strings = FALSE)
+
+sp<-sp[sp$V3 != "NA",]
+
+uids<-get_uid(sp$V3)
+
+tax_out<-function(id){
+  
+  out<-classification(id,db = "ncbi")
+  pause(3)
+  sp_out<-out[[1]][out[[1]]$rank %in% c("kingdom", "phylum","class", "order", "family", "genus", "species"),]
+  return(sp_out)
+
+  }
+
+taxon_out<-lapply(uids[1:44], tax_out)
+
+
+
+```
+
+
