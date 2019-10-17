@@ -19,6 +19,7 @@ library(knitr)
 library(stringr)
 library(taxize)
 library(profvis)
+library(jsonlite)
 
 ```
 
@@ -298,5 +299,14 @@ write.csv(taxon_df, "speciesTbl.csv", row.names = FALSE)
 
 
 Tag Table
+
+```{r}
+
+jsf<-list.files(here::here("jsons"), full.names = TRUE)
+
+jsin<-fromJSON(jsf[1])
+
+jsin$regions$boundingBox
+
 
 ```
