@@ -330,10 +330,15 @@ json_extract<-function(json_file){
 
 
 json_df<-lapply(jsf,json_extract)
+
 json_df_out<-do.call("rbind", json_df)
 
-json_df<-json_df_out %>% 
-            distinct()
 
+json_df_out$CommonName<-gsub("_"," ",json_df_out$CommonName)
+json_df_out$CommonName<-gsub("[0-9]","",json_df_out$CommonName)
+json_df_out$CommonName<-str_trim(json_df_out$CommonName)
+
+
+#write.csv(json_df_out, "TaggingTbl.csv", row.names = FALSE)
 
 ```
