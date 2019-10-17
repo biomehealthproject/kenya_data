@@ -102,12 +102,27 @@ kable(season)
 ```
 
 
+#Sensor Table
+```{r}
+cam<-read.csv("CameraDateData.csv")
+
+cam_id<-cam %>% 
+  select(Camera_ID) %>% 
+  distinct()
+
+cam_id$Date_Purchased<-as.Date("2015-01-01")
+cam_id$Model<-"Snappy Snaps"
+cam_id$Model<-"Trappy McTrapperson"
+cam_id$Serial<-999999
+
+```
+
 ## Deployment Table
 
 ```{r}
 
-dep1<-cam[,1:5]
-dep2<-cam[,c(1,6:9)]
+dep1<-cam[,1:5]   #picking out the location, camera, start, end and no days for each deployment
+dep2<-cam[,c(1,2,7:9)]
 
 names<-c("Location_ID", "Camera_ID", "Start", "End", "No_Days")
 colnames(dep1)<-names
@@ -129,7 +144,7 @@ dep_out<-dep %>%
 
 kable(dep_out)
 
-write.csv(dep_out, "DeploymentTbl.csv", row.names = FALSE)
+#write.csv(dep_out, "DeploymentTbl.csv", row.names = FALSE)
 
 
 ```
@@ -151,7 +166,7 @@ colnames(dep)<-c("Location", "Camera_ID", "DateOn", "DateOff", "DaysDeployed","D
 
 kable(head(dep))
 
-#write.csv(dep, here::here("database/kenya_data/SensorStudyTbl.csv"), row.names = FALSE)
+#write.csv(dep, "StudyTbl.csv", row.names = FALSE)
 
 ```
 
@@ -201,6 +216,8 @@ sel_exif<-all_exif_fp%>%
 
 colnames(sel_exif)<-c("SiteID", "Site", "LocationID", "CameraID", "Season", "Date", "DateTime","ImageNo",  "FileLocation")
 
+#Will probably need to change to a more general filepath at some point
+#test<-gsub("M:/", "live.rd.ucl.ac.uk/ritd-ag-project-rd00lk-kejon62/", sel_exif$FileLocation[1])
 
 write.csv(sel_exif, "ImageTbl.csv", row.names = FALSE)
 
