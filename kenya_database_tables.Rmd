@@ -314,15 +314,17 @@ json_extract<-function(json_file){
   for (i in 1:nrow(jsin$regions)){
     
     CommonName<-as.character(jsin$regions$tags)[i]
+    box_id<-jsin$regions$id[i]
     bl_x<-min(jsin$regions$points[[i]]$x)
     bl_y<-min(jsin$regions$points[[i]]$y)
     tr_x<-max(jsin$regions$points[[i]]$x)
     tr_y<-max(jsin$regions$points[[i]]$y)
-    jlo_out<-data.frame(CommonName, bl_x, bl_y, tr_x, tr_y)
+    jlo_out<-data.frame(CommonName, box_id, bl_x, bl_y, tr_x, tr_y)
     json_loop_out<-rbind(json_loop_out, jlo_out)
   }
   
-
+  TagID<-paste(TagID, json_loop_out$box_id)
+  
   json_out<-data.frame(TagID = TagID, ImageID = ImageID, json_loop_out)
   print(json_file)
   return(json_out)
