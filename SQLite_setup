@@ -1,0 +1,51 @@
+CREATE TABLE TaggingTbl(
+  TagID TEXT PRIMARY KEY,
+  ImageID TEXT NOT NULL,
+  CommonName TEXT NOT NULL,
+  bl_x NUMERIC NOT NULL,
+  bl_y NUMERIC NOT NULL,
+  tr_x NUMERIC NOT NULL,
+  tr_y NUMERIC NOT NULL
+);
+
+.mode csv
+.import d:/Fiona/Biome_Health_Project/kenya_data/TaggingTbl_no_head.csv TaggingTbl
+
+
+SELECT
+        CommonName
+FROM
+        TaggingTbl;
+
+CREATE TABLE ImageTbl(
+  SiteID TEXT NOT NULL,
+  Site TEXT NOT NULL,
+  LocationID TEXT FOREIGN KEY,
+  CameraID TEXT FOREIGN KEY,
+  Season TEXT NOT NULL,
+  DateTaken TEXT NOT NULL,
+  DateTimeTaken TEXT NOT NULL,
+  ImageID TEXT PRIMARY KEY,
+  FileLocation TEXT NOT NULL
+);
+
+.mode csv
+.import d:/Fiona/Biome_Health_Project/kenya_data/ImageTbl_no_head.csv ImageTbl
+
+
+CREATE TABLE LocationTbl(
+  LocationID TEXT PRIMARY KEY,
+  Latitude NUMERIC NOT NULL,
+  Longitude NUMERIC NOT NULL,
+  CoordSystem TEXT NOT NULL,
+  Area TEXT NOT NULL
+);
+
+.mode csv
+.import d:/Fiona/Biome_Health_Project/kenya_data/LocationTbl_no_head.csv LocationTbl
+
+
+SELECT
+        LocationID
+FROM
+        LocationTbl;
