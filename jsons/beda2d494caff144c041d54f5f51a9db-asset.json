@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "beda2d494caff144c041d54f5f51a9db",
+        "name": "2018_MT01_001639.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_MT01_001639.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "oAXE0F6Aa",
+            "type": "RECTANGLE",
+            "tags": [
+                "17_hare"
+            ],
+            "boundingBox": {
+                "height": 67.2,
+                "width": 104.33684210526316,
+                "left": 1577.4315789473683,
+                "top": 609.2210526315789
+            },
+            "points": [
+                {
+                    "x": 1577.4315789473683,
+                    "y": 609.2210526315789
+                },
+                {
+                    "x": 1681.7684210526315,
+                    "y": 609.2210526315789
+                },
+                {
+                    "x": 1681.7684210526315,
+                    "y": 676.421052631579
+                },
+                {
+                    "x": 1577.4315789473683,
+                    "y": 676.421052631579
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

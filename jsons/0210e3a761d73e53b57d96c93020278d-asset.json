@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "0210e3a761d73e53b57d96c93020278d",
+        "name": "2018_NB22_006646.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB22_006646.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "HAtljUbhd",
+            "type": "RECTANGLE",
+            "tags": [
+                "49_cattle"
+            ],
+            "boundingBox": {
+                "height": 1011.8795955882354,
+                "width": 2019.2419021364576,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 2019.2419021364576,
+                    "y": 0
+                },
+                {
+                    "x": 2019.2419021364576,
+                    "y": 1011.8795955882354
+                },
+                {
+                    "x": 0,
+                    "y": 1011.8795955882354
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

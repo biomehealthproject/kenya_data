@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "1dc96831d55f41ee412df0fbf89bd648",
+        "name": "2018_NB44_011258.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_NB44_011258.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "7AruBvqqh",
+            "type": "RECTANGLE",
+            "tags": [
+                "14_genet"
+            ],
+            "boundingBox": {
+                "height": 421.95348837209303,
+                "width": 409.1239669421488,
+                "left": 1216.2644628099174,
+                "top": 454.10893512851897
+            },
+            "points": [
+                {
+                    "x": 1216.2644628099174,
+                    "y": 454.10893512851897
+                },
+                {
+                    "x": 1625.3884297520663,
+                    "y": 454.10893512851897
+                },
+                {
+                    "x": 1625.3884297520663,
+                    "y": 876.062423500612
+                },
+                {
+                    "x": 1216.2644628099174,
+                    "y": 876.062423500612
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

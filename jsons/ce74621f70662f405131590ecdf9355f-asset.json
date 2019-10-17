@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "ce74621f70662f405131590ecdf9355f",
+        "name": "2018_NB11_004965.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_NB11_004965.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "UsGQrbm7T",
+            "type": "RECTANGLE",
+            "tags": [
+                "19_hippopotamus"
+            ],
+            "boundingBox": {
+                "height": 1465.4218009478673,
+                "width": 2684.4183877415057,
+                "left": 3.5816122584943373,
+                "top": 2.0713862559241707
+            },
+            "points": [
+                {
+                    "x": 3.5816122584943373,
+                    "y": 2.0713862559241707
+                },
+                {
+                    "x": 2688,
+                    "y": 2.0713862559241707
+                },
+                {
+                    "x": 2688,
+                    "y": 1467.4931872037914
+                },
+                {
+                    "x": 3.5816122584943373,
+                    "y": 1467.4931872037914
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "2ebf32c73ee61aa7783bc6f2eefb47b1",
+        "name": "2018_NB11_021988.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB11_021988.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "Ezpv3h1l9",
+            "type": "RECTANGLE",
+            "tags": [
+                "24_impala"
+            ],
+            "boundingBox": {
+                "height": 1478.847902097902,
+                "width": 2219.449541284404,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 2219.449541284404,
+                    "y": 0
+                },
+                {
+                    "x": 2219.449541284404,
+                    "y": 1478.847902097902
+                },
+                {
+                    "x": 0,
+                    "y": 1478.847902097902
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

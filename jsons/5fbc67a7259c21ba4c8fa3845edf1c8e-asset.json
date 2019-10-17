@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "5fbc67a7259c21ba4c8fa3845edf1c8e",
+        "name": "2018_NB21_024203.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_NB21_024203.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "0D6TSL1Gt",
+            "type": "RECTANGLE",
+            "tags": [
+                "50_sheep/goats"
+            ],
+            "boundingBox": {
+                "height": 1395.1026615969581,
+                "width": 1986.7826086956522,
+                "left": 356.35637918745545,
+                "top": 66.29372623574145
+            },
+            "points": [
+                {
+                    "x": 356.35637918745545,
+                    "y": 66.29372623574145
+                },
+                {
+                    "x": 2343.138987883108,
+                    "y": 66.29372623574145
+                },
+                {
+                    "x": 2343.138987883108,
+                    "y": 1461.3963878326995
+                },
+                {
+                    "x": 356.35637918745545,
+                    "y": 1461.3963878326995
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

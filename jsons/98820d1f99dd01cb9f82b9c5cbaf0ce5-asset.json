@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "98820d1f99dd01cb9f82b9c5cbaf0ce5",
+        "name": "2018_MN37_021728.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_MN37_021728.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "WTQ205gfV",
+            "type": "RECTANGLE",
+            "tags": [
+                "43_warthog"
+            ],
+            "boundingBox": {
+                "height": 426.46153846153845,
+                "width": 586.5688073394496,
+                "left": 2101.4311926605506,
+                "top": 622.4003496503497
+            },
+            "points": [
+                {
+                    "x": 2101.4311926605506,
+                    "y": 622.4003496503497
+                },
+                {
+                    "x": 2688,
+                    "y": 622.4003496503497
+                },
+                {
+                    "x": 2688,
+                    "y": 1048.8618881118882
+                },
+                {
+                    "x": 2101.4311926605506,
+                    "y": 1048.8618881118882
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

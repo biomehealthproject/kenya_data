@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "35db7713b116a9559f5c994d89f7e3b8",
+        "name": "2018_NB48_002817.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB48_002817.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "xtTZGtxha",
+            "type": "RECTANGLE",
+            "tags": [
+                "54_vehicle"
+            ],
+            "boundingBox": {
+                "height": 77.53846153846155,
+                "width": 172.6238532110092,
+                "left": 590.0917431192661,
+                "top": 666.4562937062938
+            },
+            "points": [
+                {
+                    "x": 590.0917431192661,
+                    "y": 666.4562937062938
+                },
+                {
+                    "x": 762.7155963302753,
+                    "y": 666.4562937062938
+                },
+                {
+                    "x": 762.7155963302753,
+                    "y": 743.9947552447553
+                },
+                {
+                    "x": 590.0917431192661,
+                    "y": 743.9947552447553
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

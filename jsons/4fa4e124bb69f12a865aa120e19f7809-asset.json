@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "4fa4e124bb69f12a865aa120e19f7809",
+        "name": "2018_OMC16_027430.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_OMC16_027430.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "G5VMV8bxA",
+            "type": "RECTANGLE",
+            "tags": [
+                "2_baboon"
+            ],
+            "boundingBox": {
+                "height": 507.5244755244755,
+                "width": 583.045871559633,
+                "left": 745.1009174311927,
+                "top": 632.9737762237762
+            },
+            "points": [
+                {
+                    "x": 745.1009174311927,
+                    "y": 632.9737762237762
+                },
+                {
+                    "x": 1328.1467889908258,
+                    "y": 632.9737762237762
+                },
+                {
+                    "x": 1328.1467889908258,
+                    "y": 1140.4982517482517
+                },
+                {
+                    "x": 745.1009174311927,
+                    "y": 1140.4982517482517
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

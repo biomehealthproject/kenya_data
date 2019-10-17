@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "07ce3d616a32a2c62af6b2b4b3ace6a4",
+        "name": "2018_NB24_002404.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB24_002404.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "8xD9zIt9t",
+            "type": "RECTANGLE",
+            "tags": [
+                "25_jackal"
+            ],
+            "boundingBox": {
+                "height": 320.55882352941177,
+                "width": 200.07167470709854,
+                "left": 2487.9283252929013,
+                "top": 611.6443014705883
+            },
+            "points": [
+                {
+                    "x": 2487.9283252929013,
+                    "y": 611.6443014705883
+                },
+                {
+                    "x": 2688,
+                    "y": 611.6443014705883
+                },
+                {
+                    "x": 2688,
+                    "y": 932.203125
+                },
+                {
+                    "x": 2487.9283252929013,
+                    "y": 932.203125
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "188784e13facdea1c9456daaf22e1c83",
+        "name": "2018_NB47_007401.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB47_007401.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "dxR8_9gZz",
+            "type": "RECTANGLE",
+            "tags": [
+                "42_vervet_monkey"
+            ],
+            "boundingBox": {
+                "height": 59.91608391608392,
+                "width": 81.02752293577981,
+                "left": 2177.1743119266057,
+                "top": 768.666083916084
+            },
+            "points": [
+                {
+                    "x": 2177.1743119266057,
+                    "y": 768.666083916084
+                },
+                {
+                    "x": 2258.2018348623856,
+                    "y": 768.666083916084
+                },
+                {
+                    "x": 2258.2018348623856,
+                    "y": 828.5821678321679
+                },
+                {
+                    "x": 2177.1743119266057,
+                    "y": 828.5821678321679
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

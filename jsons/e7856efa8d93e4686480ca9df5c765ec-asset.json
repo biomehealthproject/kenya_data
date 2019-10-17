@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "e7856efa8d93e4686480ca9df5c765ec",
+        "name": "2018_NB39_004331.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB39_004331.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "bIHJr1nHL",
+            "type": "RECTANGLE",
+            "tags": [
+                "21_human"
+            ],
+            "boundingBox": {
+                "height": 1462.9877622377624,
+                "width": 466.7889908256881,
+                "left": 2221.211009174312,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 2221.211009174312,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 1462.9877622377624
+                },
+                {
+                    "x": 2221.211009174312,
+                    "y": 1462.9877622377624
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

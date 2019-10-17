@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "abe3c9bfcd557279aba002b29cac504a",
+        "name": "2018_OMC26_000122.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_OMC26_000122.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "dWpeT20zM",
+            "type": "RECTANGLE",
+            "tags": [
+                "13_gazelle_thomsons"
+            ],
+            "boundingBox": {
+                "height": 275.750305997552,
+                "width": 392.4628099173554,
+                "left": 1432.8595041322315,
+                "top": 481.8690330477356
+            },
+            "points": [
+                {
+                    "x": 1432.8595041322315,
+                    "y": 481.8690330477356
+                },
+                {
+                    "x": 1825.3223140495868,
+                    "y": 481.8690330477356
+                },
+                {
+                    "x": 1825.3223140495868,
+                    "y": 757.6193390452876
+                },
+                {
+                    "x": 1432.8595041322315,
+                    "y": 757.6193390452876
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "f0ae8b5cc9536a3c55de5fa37d8873be",
+        "name": "2018_OMC03_020046.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_OMC03_020046.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "jPLTpZ1zP",
+            "type": "RECTANGLE",
+            "tags": [
+                "21_human"
+            ],
+            "boundingBox": {
+                "height": 1048.1750305997552,
+                "width": 721.9834710743802,
+                "left": 1580.9586776859505,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 1580.9586776859505,
+                    "y": 0
+                },
+                {
+                    "x": 2302.942148760331,
+                    "y": 0
+                },
+                {
+                    "x": 2302.942148760331,
+                    "y": 1048.1750305997552
+                },
+                {
+                    "x": 1580.9586776859505,
+                    "y": 1048.1750305997552
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

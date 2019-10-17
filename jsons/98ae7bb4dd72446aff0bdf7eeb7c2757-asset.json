@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "98ae7bb4dd72446aff0bdf7eeb7c2757",
+        "name": "2018_OMC34_021201.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_OMC34_021201.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "ByhE2c-3d",
+            "type": "RECTANGLE",
+            "tags": [
+                "15_giraffe"
+            ],
+            "boundingBox": {
+                "height": 1469.5560661764707,
+                "width": 1120.7718814610612,
+                "left": 1567.2281185389386,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 1567.2281185389386,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 1469.5560661764707
+                },
+                {
+                    "x": 1567.2281185389386,
+                    "y": 1469.5560661764707
+                }
+            ]
+        },
+        {
+            "id": "PtG8lk-0C",
+            "type": "RECTANGLE",
+            "tags": [
+                "15_giraffe"
+            ],
+            "boundingBox": {
+                "height": 1467.703125,
+                "width": 1459.7822191592004,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 1459.7822191592004,
+                    "y": 0
+                },
+                {
+                    "x": 1459.7822191592004,
+                    "y": 1467.703125
+                },
+                {
+                    "x": 0,
+                    "y": 1467.703125
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

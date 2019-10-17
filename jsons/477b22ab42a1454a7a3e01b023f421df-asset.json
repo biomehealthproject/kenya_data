@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "477b22ab42a1454a7a3e01b023f421df",
+        "name": "2018_OMC23_001148.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_OMC23_001148.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "WlRWgjvK9",
+            "type": "RECTANGLE",
+            "tags": [
+                "15_giraffe"
+            ],
+            "boundingBox": {
+                "height": 96.96192384769539,
+                "width": 97.08352144469526,
+                "left": 908.1354710426073,
+                "top": 832.8247109453281
+            },
+            "points": [
+                {
+                    "x": 908.1354710426073,
+                    "y": 832.8247109453281
+                },
+                {
+                    "x": 1005.2189924873026,
+                    "y": 832.8247109453281
+                },
+                {
+                    "x": 1005.2189924873026,
+                    "y": 929.7866347930235
+                },
+                {
+                    "x": 908.1354710426073,
+                    "y": 929.7866347930235
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

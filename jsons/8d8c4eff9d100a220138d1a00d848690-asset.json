@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "8d8c4eff9d100a220138d1a00d848690",
+        "name": "2018_MN23_000855.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_MN23_000855.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "XvgfChqBS",
+            "type": "RECTANGLE",
+            "tags": [
+                "31_ostrich"
+            ],
+            "boundingBox": {
+                "height": 398.38235294117646,
+                "width": 344.56788421778083,
+                "left": 2341.579600275672,
+                "top": 793.232536764706
+            },
+            "points": [
+                {
+                    "x": 2341.579600275672,
+                    "y": 793.232536764706
+                },
+                {
+                    "x": 2686.147484493453,
+                    "y": 793.232536764706
+                },
+                {
+                    "x": 2686.147484493453,
+                    "y": 1191.6148897058824
+                },
+                {
+                    "x": 2341.579600275672,
+                    "y": 1191.6148897058824
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

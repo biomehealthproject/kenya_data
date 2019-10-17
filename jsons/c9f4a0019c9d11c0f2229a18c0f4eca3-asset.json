@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "c9f4a0019c9d11c0f2229a18c0f4eca3",
+        "name": "2018_MT30_004175.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_MT30_004175.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "MVNtfG-TF",
+            "type": "RECTANGLE",
+            "tags": [
+                "47_zebra"
+            ],
+            "boundingBox": {
+                "height": 1308.0142011834319,
+                "width": 493.60479041916165,
+                "left": 0,
+                "top": 3.0754437869822486
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 3.0754437869822486
+                },
+                {
+                    "x": 493.60479041916165,
+                    "y": 3.0754437869822486
+                },
+                {
+                    "x": 493.60479041916165,
+                    "y": 1311.0896449704142
+                },
+                {
+                    "x": 0,
+                    "y": 1311.0896449704142
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "52e061059e0592e94ea307247655f5be",
+        "name": "2018_NB08_011468.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_NB08_011468.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "7HjNtfAyE",
+            "type": "RECTANGLE",
+            "tags": [
+                "12_gazelle_grants"
+            ],
+            "boundingBox": {
+                "height": 721.9620853080569,
+                "width": 925.8467688207862,
+                "left": 1704.8474350433046,
+                "top": 204.50740521327015
+            },
+            "points": [
+                {
+                    "x": 1704.8474350433046,
+                    "y": 204.50740521327015
+                },
+                {
+                    "x": 2630.694203864091,
+                    "y": 204.50740521327015
+                },
+                {
+                    "x": 2630.694203864091,
+                    "y": 926.4694905213271
+                },
+                {
+                    "x": 1704.8474350433046,
+                    "y": 926.4694905213271
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "cb654e3c5ede619f9452bcafa99bd168",
+        "name": "2018_NB03_004237.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB03_004237.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "m0qlwlxS6",
+            "type": "RECTANGLE",
+            "tags": [
+                "49_cattle"
+            ],
+            "boundingBox": {
+                "height": 1004.8059440559441,
+                "width": 757.4311926605506,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 757.4311926605506,
+                    "y": 0
+                },
+                {
+                    "x": 757.4311926605506,
+                    "y": 1004.8059440559441
+                },
+                {
+                    "x": 0,
+                    "y": 1004.8059440559441
+                }
+            ]
+        },
+        {
+            "id": "V7I1b5D6d",
+            "type": "RECTANGLE",
+            "tags": [
+                "49_cattle"
+            ],
+            "boundingBox": {
+                "height": 1038.2884615384617,
+                "width": 1227.7431192660551,
+                "left": 1460.256880733945,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 1460.256880733945,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 1038.2884615384617
+                },
+                {
+                    "x": 1460.256880733945,
+                    "y": 1038.2884615384617
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

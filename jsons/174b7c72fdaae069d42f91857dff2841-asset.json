@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "174b7c72fdaae069d42f91857dff2841",
+        "name": "2018_MT34_001701.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_MT34_001701.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "3Gk6hKNAj",
+            "type": "RECTANGLE",
+            "tags": [
+                "32_other_bird"
+            ],
+            "boundingBox": {
+                "height": 551.1195266272189,
+                "width": 366.626746506986,
+                "left": 0,
+                "top": 496.935798816568
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 496.935798816568
+                },
+                {
+                    "x": 366.626746506986,
+                    "y": 496.935798816568
+                },
+                {
+                    "x": 366.626746506986,
+                    "y": 1048.0553254437868
+                },
+                {
+                    "x": 0,
+                    "y": 1048.0553254437868
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

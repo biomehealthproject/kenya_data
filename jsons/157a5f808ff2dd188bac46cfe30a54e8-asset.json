@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "157a5f808ff2dd188bac46cfe30a54e8",
+        "name": "2018_MT11_000242.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_MT11_000242.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "UoaPCOeDy",
+            "type": "RECTANGLE",
+            "tags": [
+                "11_elephant"
+            ],
+            "boundingBox": {
+                "height": 1470.4421052631578,
+                "width": 1292.7157894736843,
+                "left": 422.65263157894736,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 422.65263157894736,
+                    "y": 0
+                },
+                {
+                    "x": 1715.3684210526314,
+                    "y": 0
+                },
+                {
+                    "x": 1715.3684210526314,
+                    "y": 1470.4421052631578
+                },
+                {
+                    "x": 422.65263157894736,
+                    "y": 1470.4421052631578
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

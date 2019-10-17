@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "8bb32a7f721649b660bb6f7811bf3944",
+        "name": "2018_MT23_022912.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_MT23_022912.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "zGXGFrFRA",
+            "type": "RECTANGLE",
+            "tags": [
+                "4_buffalo"
+            ],
+            "boundingBox": {
+                "height": 687.2727272727273,
+                "width": 926.5321100917432,
+                "left": 863.119266055046,
+                "top": 622.4003496503497
+            },
+            "points": [
+                {
+                    "x": 863.119266055046,
+                    "y": 622.4003496503497
+                },
+                {
+                    "x": 1789.651376146789,
+                    "y": 622.4003496503497
+                },
+                {
+                    "x": 1789.651376146789,
+                    "y": 1309.673076923077
+                },
+                {
+                    "x": 863.119266055046,
+                    "y": 1309.673076923077
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "5f412667f5225238fab99f8c96fca9e4",
+        "name": "2018_NB37_020074.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB37_020074.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "C6iYmRiLB",
+            "type": "RECTANGLE",
+            "tags": [
+                "7_cheetah"
+            ],
+            "boundingBox": {
+                "height": 1402.741258741259,
+                "width": 896.5871559633028,
+                "left": 1791.4128440366974,
+                "top": 70.81993006993007
+            },
+            "points": [
+                {
+                    "x": 1791.4128440366974,
+                    "y": 70.81993006993007
+                },
+                {
+                    "x": 2688,
+                    "y": 70.81993006993007
+                },
+                {
+                    "x": 2688,
+                    "y": 1473.561188811189
+                },
+                {
+                    "x": 1791.4128440366974,
+                    "y": 1473.561188811189
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

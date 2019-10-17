@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "6c98fc4873c56178a12b3c96e9cf57e7",
+        "name": "2018_NB20_006218.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_NB20_006218.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "ITMlZCB8W",
+            "type": "RECTANGLE",
+            "tags": [
+                "44_waterbuck"
+            ],
+            "boundingBox": {
+                "height": 459.8540145985401,
+                "width": 500.435318275154,
+                "left": 1159.0965092402464,
+                "top": 825.7253649635037
+            },
+            "points": [
+                {
+                    "x": 1159.0965092402464,
+                    "y": 825.7253649635037
+                },
+                {
+                    "x": 1659.5318275154004,
+                    "y": 825.7253649635037
+                },
+                {
+                    "x": 1659.5318275154004,
+                    "y": 1285.5793795620439
+                },
+                {
+                    "x": 1159.0965092402464,
+                    "y": 1285.5793795620439
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

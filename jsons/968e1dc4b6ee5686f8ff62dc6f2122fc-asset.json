@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "968e1dc4b6ee5686f8ff62dc6f2122fc",
+        "name": "2018_MN42_001723.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_MN42_001723.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "fNttzrf95",
+            "type": "RECTANGLE",
+            "tags": [
+                "47_zebra"
+            ],
+            "boundingBox": {
+                "height": 1457.701048951049,
+                "width": 2138.422018348624,
+                "left": 546.0550458715596,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 546.0550458715596,
+                    "y": 0
+                },
+                {
+                    "x": 2684.477064220184,
+                    "y": 0
+                },
+                {
+                    "x": 2684.477064220184,
+                    "y": 1457.701048951049
+                },
+                {
+                    "x": 546.0550458715596,
+                    "y": 1457.701048951049
+                }
+            ]
+        },
+        {
+            "id": "ChLm3rR4n",
+            "type": "RECTANGLE",
+            "tags": [
+                "47_zebra"
+            ],
+            "boundingBox": {
+                "height": 1464.75,
+                "width": 2036.256880733945,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 2036.256880733945,
+                    "y": 0
+                },
+                {
+                    "x": 2036.256880733945,
+                    "y": 1464.75
+                },
+                {
+                    "x": 0,
+                    "y": 1464.75
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

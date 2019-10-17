@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "ea459550dcb4773d7129735f4f3d8f48",
+        "name": "2018_MN37_021074.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_MN37_021074.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "TzvldEkOE",
+            "type": "RECTANGLE",
+            "tags": [
+                "46_wildebeest"
+            ],
+            "boundingBox": {
+                "height": 61.67832167832168,
+                "width": 59.88990825688074,
+                "left": 2497.7614678899085,
+                "top": 238.2325174825175
+            },
+            "points": [
+                {
+                    "x": 2497.7614678899085,
+                    "y": 238.2325174825175
+                },
+                {
+                    "x": 2557.651376146789,
+                    "y": 238.2325174825175
+                },
+                {
+                    "x": 2557.651376146789,
+                    "y": 299.91083916083915
+                },
+                {
+                    "x": 2497.7614678899085,
+                    "y": 299.91083916083915
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

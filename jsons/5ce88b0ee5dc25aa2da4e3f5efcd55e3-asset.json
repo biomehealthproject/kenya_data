@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "5ce88b0ee5dc25aa2da4e3f5efcd55e3",
+        "name": "2018_MN23_003324.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_MN23_003324.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "kZgoHpLqr",
+            "type": "RECTANGLE",
+            "tags": [
+                "47_zebra"
+            ],
+            "boundingBox": {
+                "height": 930.1764705882354,
+                "width": 1785.8249483115092,
+                "left": 0,
+                "top": 535.6737132352941
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 535.6737132352941
+                },
+                {
+                    "x": 1785.8249483115092,
+                    "y": 535.6737132352941
+                },
+                {
+                    "x": 1785.8249483115092,
+                    "y": 1465.8501838235295
+                },
+                {
+                    "x": 0,
+                    "y": 1465.8501838235295
+                }
+            ]
+        },
+        {
+            "id": "cj--naHLb",
+            "type": "RECTANGLE",
+            "tags": [
+                "47_zebra"
+            ],
+            "boundingBox": {
+                "height": 1467.703125,
+                "width": 2302.6767746381806,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 2302.6767746381806,
+                    "y": 0
+                },
+                {
+                    "x": 2302.6767746381806,
+                    "y": 1467.703125
+                },
+                {
+                    "x": 0,
+                    "y": 1467.703125
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

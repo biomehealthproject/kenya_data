@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "6f3f298e3fe975512177e054dc060c19",
+        "name": "2018_MT26_023488.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_MT26_023488.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "ywMdCs2_D",
+            "type": "RECTANGLE",
+            "tags": [
+                "46_wildebeest"
+            ],
+            "boundingBox": {
+                "height": 899.539349112426,
+                "width": 1157.1097804391218,
+                "left": 1530.8902195608782,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 1530.8902195608782,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 899.539349112426
+                },
+                {
+                    "x": 1530.8902195608782,
+                    "y": 899.539349112426
+                }
+            ]
+        },
+        {
+            "id": "hKnXIqkf1",
+            "type": "RECTANGLE",
+            "tags": [
+                "46_wildebeest"
+            ],
+            "boundingBox": {
+                "height": 1466.7630177514793,
+                "width": 1580.9660678642715,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 1580.9660678642715,
+                    "y": 0
+                },
+                {
+                    "x": 1580.9660678642715,
+                    "y": 1466.7630177514793
+                },
+                {
+                    "x": 0,
+                    "y": 1466.7630177514793
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

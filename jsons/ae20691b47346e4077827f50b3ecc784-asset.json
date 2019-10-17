@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "ae20691b47346e4077827f50b3ecc784",
+        "name": "2018_MT26_025349.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_MT26_025349.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "3M7l68FDt",
+            "type": "RECTANGLE",
+            "tags": [
+                "10_eland"
+            ],
+            "boundingBox": {
+                "height": 1456.530177514793,
+                "width": 2686.2115768463073,
+                "left": 1.7884231536926147,
+                "top": 4.864792899408284
+            },
+            "points": [
+                {
+                    "x": 1.7884231536926147,
+                    "y": 4.864792899408284
+                },
+                {
+                    "x": 2688,
+                    "y": 4.864792899408284
+                },
+                {
+                    "x": 2688,
+                    "y": 1461.3949704142012
+                },
+                {
+                    "x": 1.7884231536926147,
+                    "y": 1461.3949704142012
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

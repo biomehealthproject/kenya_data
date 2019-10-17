@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "f6ba04fcbf8ce703992e3e335beb4aea",
+        "name": "2018_NB44_028550.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_NB44_028550.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "LAwChhcEl",
+            "type": "RECTANGLE",
+            "tags": [
+                "53_unidentified"
+            ],
+            "boundingBox": {
+                "height": 802.0354957160342,
+                "width": 1973.4214876033059,
+                "left": 714.5785123966942,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 714.5785123966942,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 802.0354957160342
+                },
+                {
+                    "x": 714.5785123966942,
+                    "y": 802.0354957160342
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

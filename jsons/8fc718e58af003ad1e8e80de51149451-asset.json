@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "8fc718e58af003ad1e8e80de51149451",
+        "name": "2018_NB06_003905.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/2/2018_NB06_003905.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "eHSiMLJSf",
+            "type": "RECTANGLE",
+            "tags": [
+                "21_human"
+            ],
+            "boundingBox": {
+                "height": 990.708041958042,
+                "width": 449.1743119266055,
+                "left": 2238.8256880733948,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 2238.8256880733948,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 0
+                },
+                {
+                    "x": 2688,
+                    "y": 990.708041958042
+                },
+                {
+                    "x": 2238.8256880733948,
+                    "y": 990.708041958042
+                }
+            ]
+        },
+        {
+            "id": "YLtVkVvkq",
+            "type": "RECTANGLE",
+            "tags": [
+                "21_human"
+            ],
+            "boundingBox": {
+                "height": 1447.1276223776224,
+                "width": 954.7155963302753,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 954.7155963302753,
+                    "y": 0
+                },
+                {
+                    "x": 954.7155963302753,
+                    "y": 1447.1276223776224
+                },
+                {
+                    "x": 0,
+                    "y": 1447.1276223776224
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "aab4a6417c86f82aedf27a8a7c2c4131",
+        "name": "2018_MN08_000773.JPG",
+        "path": "file:Z:/biome_health_project_files/country_files/kenya/tagging_photos/1/2018_MN08_000773.JPG",
+        "size": {
+            "width": 2688,
+            "height": 1512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "pvnLRtPMs",
+            "type": "RECTANGLE",
+            "tags": [
+                "22_hyena_spotted"
+            ],
+            "boundingBox": {
+                "height": 378,
+                "width": 535.3769813921433,
+                "left": 878.0923501033769,
+                "top": 511.58547794117646
+            },
+            "points": [
+                {
+                    "x": 878.0923501033769,
+                    "y": 511.58547794117646
+                },
+                {
+                    "x": 1413.4693314955202,
+                    "y": 511.58547794117646
+                },
+                {
+                    "x": 1413.4693314955202,
+                    "y": 889.5854779411765
+                },
+                {
+                    "x": 878.0923501033769,
+                    "y": 889.5854779411765
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}
