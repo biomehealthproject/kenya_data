@@ -302,11 +302,30 @@ Tag Table
 
 ```{r}
 
-jsf<-list.files(here::here("jsons"), full.names = TRUE)
+jsf<-list.files(here::here("jsons"), full.names = TRUE, pattern = "*json")
 
-jsin<-fromJSON(jsf[1])
+json_extract<-function(json_file){
+  
+  jsin<-fromJSON(json_file)  
+  ImageID<-jsin$asset$name
+  TagID<-gsub("-asset.json", "",basename(json_file))
+  CommonName<-as.character(jsin$regions$tags)
+  bl_x<-min(jsin$regions$points[[1]]$x)
+  bl_y<-min(jsin$regions$points[[1]]$y)
+  tr_x<-max(jsin$regions$points[[1]]$x)
+  tr_y<-max(jsin$regions$points[[1]]$y)
+  
+  json_out<-data.frame(TagID = TagID, ImageID = ImageID, CommonName = CommonName, bl_x, bl_y, tr_x, tr_y)
+  print(json_file)
+  return(json_out)
+    }
 
-jsin$regions$boundingBox
+
+json_df<-lapply(jsf,json_extract)
+json_df_out<-do.call("rbind", json_df)
+
+json_df<-json_df_out %>% 
+            distinct()
 
 
 ```
