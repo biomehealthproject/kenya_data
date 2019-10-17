@@ -306,16 +306,24 @@ jsf<-list.files(here::here("jsons"), full.names = TRUE, pattern = "*json")
 
 json_extract<-function(json_file){
   
-  jsin<-fromJSON(json_file)  
+  jsin<-fromJSON(json_file) 
   ImageID<-jsin$asset$name
   TagID<-gsub("-asset.json", "",basename(json_file))
-  CommonName<-as.character(jsin$regions$tags)
-  bl_x<-min(jsin$regions$points[[1]]$x)
-  bl_y<-min(jsin$regions$points[[1]]$y)
-  tr_x<-max(jsin$regions$points[[1]]$x)
-  tr_y<-max(jsin$regions$points[[1]]$y)
   
-  json_out<-data.frame(TagID = TagID, ImageID = ImageID, CommonName = CommonName, bl_x, bl_y, tr_x, tr_y)
+  json_loop_out<-NULL
+  for (i in 1:nrow(jsin$regions)){
+    
+    CommonName<-as.character(jsin$regions$tags)[i]
+    bl_x<-min(jsin$regions$points[[i]]$x)
+    bl_y<-min(jsin$regions$points[[i]]$y)
+    tr_x<-max(jsin$regions$points[[i]]$x)
+    tr_y<-max(jsin$regions$points[[i]]$y)
+    jlo_out<-data.frame(CommonName, bl_x, bl_y, tr_x, tr_y)
+    json_loop_out<-rbind(json_loop_out, jlo_out)
+  }
+  
+
+  json_out<-data.frame(TagID = TagID, ImageID = ImageID, json_loop_out)
   print(json_file)
   return(json_out)
     }
