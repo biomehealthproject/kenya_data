@@ -178,7 +178,7 @@ colnames(dep)<-c("LocationID", "CameraID", "DateOn", "DateOff", "DaysDeployed","
 
 kable(head(dep))
 
-dep$DeploymentID<-paste(dep$Location_ID, dep$Season, dep$Deployment, sep = "_")
+dep$DeploymentID<-paste(dep$LocationID, dep$Season, dep$Deployment, sep = "_")
 
 write.csv(dep, "StudyTbl.csv", row.names = FALSE)
 
@@ -366,7 +366,7 @@ json_extract<-function(json_file){
     json_loop_out<-rbind(json_loop_out, jlo_out)
   }
   
-  TagID<-paste(TagID, json_loop_out$box_id)
+  TagID<-paste(TagID, json_loop_out$box_id, sep = "_")
   
   json_out<-data.frame(TagID = TagID, ImageID = ImageID, json_loop_out)
   print(json_file)
@@ -384,6 +384,9 @@ json_df_out$CommonName<-gsub("[0-9]","",json_df_out$CommonName)
 json_df_out$CommonName<-str_trim(json_df_out$CommonName)
 
 
+
 #write.csv(json_df_out, "TaggingTbl.csv", row.names = FALSE)
+
+write.table(json_df_out, "TaggingTbl_no_head.csv", row.names = FALSE, col.names = FALSE, sep = ",")
 
 ```
