@@ -212,7 +212,7 @@ all$filepath<-gsub("\\\\","/",all$filepath)
 
 ```{r}
 #fp<-read.csv("kenya_original_filepaths_working_filepaths.csv", stringsAsFactors = FALSE)
-fp<-vroom::vroom("kenya_original_filepaths_working_filepaths.csv", delim = ",")
+fp<-vroom::vroom("kenya_original_filepaths_working_filepaths_2019_10_18.csv", delim = ",")
 
 fp$filepath<-gsub("//","/", fp$filepath)
 
@@ -231,7 +231,32 @@ colnames(sel_exif)<-c("SiteID", "Site", "LocationID", "CameraID", "Season", "Dat
 #Will probably need to change to a more general filepath at some point
 #test<-gsub("M:/", "live.rd.ucl.ac.uk/ritd-ag-project-rd00lk-kejon62/", sel_exif$FileLocation[1])
 
-write.csv(sel_exif, "ImageTbl.csv", row.names = FALSE)
+###not sure where the duplications are coming from - needs investigating
+
+#sel_exif_out<-sel_exif[!duplicated(sel_exif$ImageID),]
+
+duplic<-sel_exif[duplicated(sel_exif$ImageID),]
+
+duplic_rows<-sel_exif[sel_exif$ImageID %in% duplic$ImageID,]
+
+no_duplic_rows<-sel_exif[!sel_exif$ImageID %in% duplic$ImageID,]
+
+duplic_row_a<-duplic_rows %>% 
+  group_by(ImageID) %>% 
+  filter(Date == min(Date)) %>% 
+  ungroup()
+
+duplic_row_b<-duplic_rows %>% 
+  group_by(ImageID) %>% 
+  filter(Date == max(Date)) %>% 
+  ungroup()
+
+substring(duplic_row_b$ImageID, nchar(duplic_row_b$ImageID)-8, nchar(duplic_row_b$ImageID)-8) <- "1"
+
+
+sel_exif<-rbind(no_duplic_rows, duplic_row_a, duplic_row_b)
+
+write.csv(sel_exif, "ImageTbl_new.csv", row.names = FALSE)
 
 
 ```
