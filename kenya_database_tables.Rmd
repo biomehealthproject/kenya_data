@@ -76,7 +76,7 @@ kable(summary(locs))
 
 #write.csv(locs, "LocationTbl.csv", row.names = FALSE)
 
-write.table(locs, "LocationTbl.csv", row.names = FALSE)
+#write.table(locs, "LocationTbl_no_head.csv", row.names = FALSE, col.names = FALSE, sep = ",")
 
 ```
 
