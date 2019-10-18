@@ -1,3 +1,47 @@
+CREATE TABLE LocationTbl(
+  LocationID TEXT PRIMARY KEY,
+  Latitude NUMERIC NOT NULL,
+  Longitude NUMERIC NOT NULL,
+  CoordSystem TEXT NOT NULL,
+  Area TEXT NOT NULL
+  Country TEXT NOT NULL
+);
+
+.mode csv
+.import C:/Users/Fiona/Documents/Biome_Health_Project/kenya_data/LocationTbl_no_head.csv LocationTbl
+
+CREATE TABLE SensorTbl(
+  CameraID TEXT PRIMARY KEY,
+  DatePurchased TEXT NOT NULL,
+  Model TEXT NOT NULL,
+  Make TEXT NOT NULL,
+  Serial TEXT NOT NULL
+);
+
+.mode csv
+.import C:/Users/Fiona/Documents/Biome_Health_Project/kenya_data/SensorTbl_no_head.csv SensorTbl
+
+CREATE TABLE ImageTbl(
+  SiteID TEXT NOT NULL,
+  Site TEXT NOT NULL,
+  LocationID TEXT NOT NULL,
+  CameraID TEXT NOT NULL,
+  Season TEXT NOT NULL,
+  DateTaken TEXT NOT NULL,
+  DateTimeTaken TEXT NOT NULL,
+  ImageID TEXT PRIMARY KEY,
+  FileLocation TEXT NOT NULL,
+  FOREIGN KEY (SensorID)
+    REFERENCES SensorTbl (SensorID),
+  FOREIGN KEY (LocationID)
+    REFERENCES LocationTbl (LocationID)
+);
+
+.mode csv
+.import C:/Users/Fiona/Documents/Biome_Health_Project/kenya_data/ImageTbl_no_head.csv ImageTbl
+
+
+
 CREATE TABLE TaggingTbl(
   TagID TEXT PRIMARY KEY,
   ImageID TEXT NOT NULL,
@@ -5,47 +49,50 @@ CREATE TABLE TaggingTbl(
   bl_x NUMERIC NOT NULL,
   bl_y NUMERIC NOT NULL,
   tr_x NUMERIC NOT NULL,
-  tr_y NUMERIC NOT NULL
+  tr_y NUMERIC NOT NULL,
+  FOREIGN KEY (ImageID)
+    REFERENCES ImageTbl (ImageID),
+  FOREIGN KEY (CommonName)
+    REFERENCES SpeciesTbl (CommonName)
 );
 
 .mode csv
-.import d:/Fiona/Biome_Health_Project/kenya_data/TaggingTbl_no_head.csv TaggingTbl
+.import C:/Users/Fiona/Documents/Biome_Health_Project/kenya_data/TaggingTbl_no_head.csv TaggingTbl
 
 
-SELECT
-        CommonName
-FROM
-        TaggingTbl;
 
-CREATE TABLE ImageTbl(
-  SiteID TEXT NOT NULL,
-  Site TEXT NOT NULL,
-  LocationID TEXT FOREIGN KEY,
-  CameraID TEXT FOREIGN KEY,
-  Season TEXT NOT NULL,
-  DateTaken TEXT NOT NULL,
-  DateTimeTaken TEXT NOT NULL,
-  ImageID TEXT PRIMARY KEY,
-  FileLocation TEXT NOT NULL
+CREATE TABLE SpeciesTbl(
+  Kingdom TEXT NOT NULL,
+  Phylum TEXT NOT NULL,
+  Class TEXT NOT NULL,
+  Order TEXT NOT NULL,
+  Family TEXT NOT NULL,
+  Genus TEXT NOT NULL,
+  Binomial TEXT NOT NULL,
+  CommonName TEXT PRIMARY KEY
 );
 
 .mode csv
-.import d:/Fiona/Biome_Health_Project/kenya_data/ImageTbl_no_head.csv ImageTbl
+.import C:/Users/Fiona/Documents/Biome_Health_Project/kenya_data/SpeciesTbl_no_head.csv SpeciesTbl
 
 
-CREATE TABLE LocationTbl(
-  LocationID TEXT PRIMARY KEY,
-  Latitude NUMERIC NOT NULL,
-  Longitude NUMERIC NOT NULL,
-  CoordSystem TEXT NOT NULL,
-  Area TEXT NOT NULL
+CREATE TABLE DeploymentTbl(
+  LocationID TEXT NOT NULL,
+  CameraID TEXT NOT NULL,
+  DateOn TEXT NOT NULL,
+  DateOff TEXT NOT NULL,
+  DaysDeployed INTEGER NOT NULL,
+  Deployment TEXT PRIMARY KEY,
+  Season INTEGER NOT NULL,
+  Area TEXT NOT NULL,
+  SensorType TEXT NOT NULL,
+  PersonDeploying TEXT NOT NULL,
+  DeploymentID TEXT NOT NULL,
+  FOREIGN KEY (LocationID)
+    REFERENCES LocationTbl (LocationID),
+  FOREIGN KEY (CameraID)
+    REFERENCES SensorTbl (CameraID)
 );
 
 .mode csv
-.import d:/Fiona/Biome_Health_Project/kenya_data/LocationTbl_no_head.csv LocationTbl
-
-
-SELECT
-        LocationID
-FROM
-        LocationTbl;
+.import C:/Users/Fiona/Documents/Biome_Health_Project/kenya_data/DeploymentTbl_no_head.csv DeploymentTbl

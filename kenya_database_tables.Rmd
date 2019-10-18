@@ -72,6 +72,8 @@ locs$area[grepl("OMC",locs$Location.ID)]<- "OMC"
 
 colnames(locs)<-c("Location", "Latitude", "Longitude","CoordSystem","Area" )
 
+locs$Country<-"Kenya"
+
 kable(summary(locs))
 
 #write.csv(locs, "LocationTbl.csv", row.names = FALSE)
@@ -117,8 +119,11 @@ cam_id$Model<-"Snappy Snaps"
 cam_id$Make<-"Trappy McTrapperson"
 cam_id$Serial<-999999
 
+colnames(cam_id)<-c("CameraID", "DatePurchased", "Model", "Make", "Serial")
 
 #write.csv(cam_id, "SensorTbl.csv", row.names = FALSE)
+
+#write.table(cam_id, "SensorTbl_no_head.csv", row.names = FALSE, col.names = FALSE, sep = ",")
 
 ```
 
@@ -138,13 +143,13 @@ dep2$Deployment<-2
 
 dep<-rbind(dep1,dep2)
 
-dep$Country<-"Kenya"
-dep$Season<-1
+#dep$Country<-"Kenya"
+dep$Season<-2018
 
 dep<-dep[!is.na(dep$Start) & !is.na(dep$End),]
 
 dep_out<-dep %>%
-  group_by(Deployment, Country, Season)%>%
+  group_by(Deployment, Season)%>%
   summarise(StartDate = min(na.omit(Start)), EndDate = max(na.omit(End)), NumCameras = n())
 
 kable(dep_out)
@@ -169,11 +174,16 @@ dep$SensorType<-"CT"
 
 dep$PersonDeploying<- "Emily Madsen"
 
-colnames(dep)<-c("Location", "Camera_ID", "DateOn", "DateOff", "DaysDeployed","Deployment", "Country", "Season", "Area", "SensorType", "PersonDeploying")
+colnames(dep)<-c("LocationID", "CameraID", "DateOn", "DateOff", "DaysDeployed","Deployment", "Season" ,"Area", "SensorType", "PersonDeploying")
 
 kable(head(dep))
 
+dep$DeploymentID<-paste(dep$Location_ID, dep$Season, dep$Deployment, sep = "_")
+
 write.csv(dep, "StudyTbl.csv", row.names = FALSE)
+
+write.table(dep, "StudyTbl_no_head.csv", row.names = FALSE, col.names = FALSE, sep = ",")
+
 
 ```
 
@@ -256,8 +266,9 @@ substring(duplic_row_b$ImageID, nchar(duplic_row_b$ImageID)-8, nchar(duplic_row_
 
 sel_exif<-rbind(no_duplic_rows, duplic_row_a, duplic_row_b)
 
-write.csv(sel_exif, "ImageTbl_new.csv", row.names = FALSE)
+#write.csv(sel_exif, "ImageTbl.csv", row.names = FALSE)
 
+write.table(sel_exif, "ImageTbl_no_head.csv", row.names = FALSE, col.names = FALSE, sep = ",")
 
 ```
 
@@ -292,6 +303,8 @@ sp<-read.csv("species_codes.csv", stringsAsFactors = FALSE, header = FALSE, na.s
 
 sp<-sp[sp$V3 != "NA",]
 
+
+common<-sp$V1
 uids<-get_uid(sp$V3)
 
 tax_out<-function(id){
@@ -313,13 +326,17 @@ tax_out<-function(id){
 
   }
 
-taxon_out<-lapply(uids[1:44], tax_out)
+taxon_out<-lapply(uids, tax_out)
 
 taxon_df<-do.call(rbind,taxon_out)
 
-colnames(taxon_df)<-c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
+taxon_df$COmmonName<-sp$V1
+  
+colnames(taxon_df)<-c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Binomial", "CommonName")
 
-write.csv(taxon_df, "speciesTbl.csv", row.names = FALSE)
+#write.csv(taxon_df, "SpeciesTbl.csv", row.names = FALSE)
+
+#write.table(taxon_df, "SpeciesTbl_no_head.csv", row.names = FALSE, col.names = FALSE, sep = ",")
 
 ```
 
